@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg site-navigation">
+  <div class="container">
+    <a class="navbar-brand" href="{{ .Site.BaseURL }}">
+      <img src="{{ "images/logo.png" | absURL }}" alt="logo" />
+    </a>
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-toggle="collapse"
+      data-target="#sitenavbar"
+    >
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="sitenavbar">
+      <ul class="navbar-nav ml-auto main-nav">
+        {{ range .Site.Menus.nav }}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+        {{ with .Site.Params.navAction }}
+          {{ if .status }}
+            <li class="nav-item">
+              <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="{{ .url }}">
+                <span class="btn-area">
+                  <span data-text="{{ .name }}">
+                    {{ .name }}
+                  </span>
+                </span>
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>

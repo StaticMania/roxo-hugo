@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<section class="site-project-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="site-project-header-content">
+          <h1>
+            {{ .Title | safeHTML }}
+          </h1>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <a href="#project" class="site-project-header-action scroll-to">
+          <span>Scroll Down</span>
+          <img src="{{ "images/arrow-down.svg" | absURL }}" alt="arrow-down">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-project" id="project">
+  <div class="container">
+    <div class="row">
+      {{ range (.Paginator 4).Pages }}
+      <div class="col-lg-6 col-md-10 mx-auto">
+        <div class="site-project-item">
+          <div class="site-project-item-thumb">
+            <img src="{{ .Params.Image | absURL }}" alt="project-thumb">
+          </div>
+          <div class="site-project-item-content">
+            <span>{{ delimit .Params.category ", " }}</span>
+            <h3>{{ .Title }}</h3>
+            <a href="{{ .Permalink }}" class="read-more">view project</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      <div class="col-12">
+        <div class="site-project-pagination">
+          {{ template "_internal/pagination.html" . }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "call-to-action.html" . }}
+
+{{ end }}

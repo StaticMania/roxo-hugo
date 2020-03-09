@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="site-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <h1 class="site-contact-title">
+          {{ .Params.heading | safeHTML }}
+        </h1>
+      </div>
+      <div class="col-lg-6 ml-auto">
+        <div class="site-contact-form">
+          <h4>{{ .Params.form_heading }}</h4>
+          <form id="contact-form" action="{{ .Site.Params.formspreeFormUrl }}" method="POST">
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First Name">
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last Name">
+              </div>
+              <div class="col-lg-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+              </div>
+              <div class="col-lg-6">
+                <div class="select-wrapper">
+                  <select class="form-control" id="projectType" name="project-type">
+                    <option value="" selected disabled hidden>Project Type</option>
+                    <option value="gd">Graphics Design</option>
+                    <option value="wb">Web Design</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <textarea class="form-control" id="aboutProject" name="about-project" rows="6" placeholder="About the Project"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary" id="contact-form-button">
+                  <span class="btn-area">
+                    <span data-text="Send Message">
+                      Send Message
+                    </span>
+                  </span>
+                </button>
+              </div>
+              <p id="contact-form-status"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

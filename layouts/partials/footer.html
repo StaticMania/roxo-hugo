@@ -1,0 +1,74 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="site-footer-logo"><a href="{{ .Site.BaseURL }}"><img src="{{ "images/logo-footer.png" | absURL }}" alt="logo-footer"></a></div>
+      </div>
+      {{ with .Site.Params.footer.contactInfo }}
+      <div class="col-lg-3 col-md-6">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .title }}</h5>
+          <p class="site-footer-widget-description">
+            {{ .address | safeHTML }}
+            <br>
+            <a href="tel:{{ .phone }}">{{ .phone }}</a>
+            <br>
+            <a href="mailto:{{ .email }}">{{ .email }}</a>
+          </p>
+        </div>
+      </div>
+      {{ end }}
+      {{ with .Site.Params.footer.sitemap }}
+      <div class="col-lg-2 col-md-6">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .title }}</h5>
+          <ul class="site-footer-widget-links">
+            {{ range .link }}
+            <li><a href="{{ .url }}">{{ .name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+      {{ with .Site.Params.footer.social }}
+      <div class="col-lg-2 col-md-6">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .title }}</h5>
+          <ul class="site-footer-widget-links">
+            {{ range .link }}
+              <li><a href="{{ .url }}">{{ .name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+      {{ with .Site.Params.footer.service }}
+      <div class="col-lg-3 col-md-6">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .title }}</h5>
+          <p class="site-footer-widget-description">
+            {{ .description | safeHTML }}
+          </p>
+        </div>
+      </div>
+      {{ end }}
+      <div class="col-lg-2 col-12">
+        <a href="#top" class="site-footer-widget-top">
+          <img src="{{ "images/to-top.svg" | absURL }}" alt="back-to-top">
+          <p>
+            I want to 
+            <br>
+            visit again
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{{ $formhandler := resources.Get "js/formhandler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script>
+{{ $vendor := resources.Get "js/vendor.js" | minify }}
+<script src="{{ $vendor.Permalink }}"></script>
+{{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>
