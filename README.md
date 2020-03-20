@@ -40,7 +40,7 @@ Have some question or facing any technical trouble feel free to [Contact Us](htt
 
 ## Licensing
 
-This Repository is licensed under the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.html)
+This Repository is licensed under the [MIT](https://github.com/StaticMania/roxo-hugo/blob/master/LICENSE) License
 
 ## Hire
 
