@@ -9,7 +9,7 @@ summarylength = 25
   # Navbar Menus
   [[menu.nav]]
     name    = "Home"
-    url     = "/"
+    url     = ""
     weight  = 1
   [[menu.nav]]
     name    = "About"
@@ -23,6 +23,10 @@ summarylength = 25
     name    = "Blog"
     url     = "blog"
     weight  = 4
+  [[menu.nav]]
+    name    = "Get in touch"
+    url     = "contact"
+    weight  = 5
 
 # Site Params
 [params]
@@ -31,6 +35,8 @@ summarylength = 25
   # Meta data
   description = "Roxo Hugo themes | Design Agency Template by StaticMania"
   author = "StaticMania"
+  # Google Analitycs
+  googleAnalitycsID = "Your ID"
   # We're using formspree.io for form handling, paste your formspree url below
   formspreeFormUrl  = "https://formspree.io/myykjpje"
   
@@ -38,7 +44,7 @@ summarylength = 25
   [params.navAction]
     status  = true
     name    = "Get in touch"
-    url     = "/contact"
+    url     = "contact"
   
 
   # Banner Section
@@ -48,9 +54,9 @@ summarylength = 25
     heading               = "We’re a Design Studio That Belies In the Great Ideas"
     tagline               = "WE WORK HARD, WE PLAY HARD"
     primary_button        = "See Our Works"
-    primary_button_url    = "/portfolio"
+    primary_button_url    = "portfolio"
     secondary_button      = "Connect with Us"
-    secondary_button_url  = "/contact"
+    secondary_button_url  = "contact"
 
   [params.portfolio]
     enable    = true
@@ -62,9 +68,9 @@ summarylength = 25
     background_image    = "images/backgrounds/cta-background.jpg"
     title               = "LET’S WORK TOGETHER"
     primary_button      = "Submit Query"
-    primary_button_url  = "/contact"
+    primary_button_url  = "contact"
     secondary_button    = "Not Convinced"
-    secondary_button_url = "/portfolio"
+    secondary_button_url = "portfolio"
 
   [params.footer]
     # Footer Contact Info
@@ -78,16 +84,16 @@ summarylength = 25
         title   = "Sitemap"
         [[params.footer.sitemap.link]]
           name = "About Company"
-          url  = "/about"
+          url  = "about"
         [[params.footer.sitemap.link]]
           name = "Projects"
-          url  = "/portfolio"
+          url  = "portfolio"
         [[params.footer.sitemap.link]]
           name = "Blog"
-          url  = "/blog"
+          url  = "blog"
         [[params.footer.sitemap.link]]
           name = "Contact"
-          url  = "/contact"
+          url  = "contact"
       # Footer Social Media
       [params.footer.social]
         title   = "Social Media"
