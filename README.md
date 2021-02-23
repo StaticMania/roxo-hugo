@@ -23,7 +23,7 @@ Checkout the live demo [here](https://roxo-hugo.staticmania.com/)
 
     cp -a themes/roxo/exampleSite/* .
 
-3. Build your site with `hugo serve` and see the result at `http://localhost:1313/`.
+3. Build your site with `hugo server` and see the result at `http://localhost:1313/`.
 
 
 ## Features
