@@ -39,6 +39,22 @@ summarylength = 25
   googleAnalitycsID = "Your ID"
   # We're using formspree.io for form handling, paste your formspree url below
   formspreeFormUrl  = "https://formspree.io/myykjpje"
+
+  # Contact Form
+  [params.contactForm]
+    placeholder_first_name        = "First Name"
+    placeholder_last_name         = "Last Name"
+    placeholder_email             = "Email"
+    placeholder_project_type      = "Project Type"
+    placeholder_about_the_project = "About the Project"
+    send_message                  = "Send Message"
+
+    [[params.contactForm.projectType]]
+      value = "gd"
+      title  = "Graphics Design"
+    [[params.contactForm.projectType]]
+      value = "wd"
+      title  = "Web Design"
   
   # Navbar Action Button
   [params.navAction]
