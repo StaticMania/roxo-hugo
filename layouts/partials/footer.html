@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="site-footer-logo"><a href="{{ .Site.BaseURL }}"><img src="{{ "images/logo-footer.png" | absURL }}" alt="logo-footer"></a></div>
+        <div class="site-footer-logo"><a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo_footer | absURL }}" alt="logo-footer"></a></div>
       </div>
       {{ with .Site.Params.footer.contactInfo }}
       <div class="col-lg-3 col-md-6">
@@ -56,9 +56,7 @@
         <a href="#top" class="site-footer-widget-top">
           <img src="{{ "images/to-top.svg" | absURL }}" alt="back-to-top">
           <p>
-            I want to 
-            <br>
-            visit again
+	    {{ .Site.Params.footer.back_to_top.description | safeHTML }}
           </p>
         </a>
       </div>

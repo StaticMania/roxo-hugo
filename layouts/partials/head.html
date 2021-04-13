@@ -20,6 +20,6 @@
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />
-  <link rel="icon" href="{{ "images/favicon.ico" | absURL }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ .Site.Params.favicon_shortcut_icon | absURL }}" type="image/x-icon" />
+  <link rel="icon" href="{{ .Site.Params.favicon_icon | absURL }}" type="image/x-icon" />
 </head>
