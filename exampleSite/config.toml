@@ -34,6 +34,7 @@ summarylength = 25
   logo_footer = "images/logo-footer.png"
   favicon_icon = "images/favicon.ico"
   favicon_shortcut_icon = "images/favicon.png"
+  custom_stylesheets = []   # [ "scss/my_1.scss", "scss/my_2.scss" ]
   dateFormat = "26 FEB 1994"
   # Meta data
   description = "Roxo Hugo themes | Design Agency Template by StaticMania"
