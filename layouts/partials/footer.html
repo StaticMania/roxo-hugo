@@ -67,6 +67,27 @@
         </a>
       </div>
     </div>
+    {{ if .Site.Params.footer.qr_print }}
+    <div class="row d-none d-print-block">
+      <div class="col col-lg-2">
+        {{ $qrcode := resources.Get "js/qrcode.js" | minify }}
+        <script src="{{ $qrcode.Permalink }}"></script>
+
+        <div id="qrcode">
+          <script type="text/javascript">
+           new QRCode(document.getElementById("qrcode"), {
+             text: "{{ .Page.RelPermalink | absURL }}",
+             width: 128,
+             height: 128,
+           });
+          </script>
+        </div>
+      </div>
+      <div class="col col-md-auto">
+        {{ .Page.RelPermalink | absURL }}
+      </div>
+    </div>
+    {{ end }}
   </div>
 </footer>
 
