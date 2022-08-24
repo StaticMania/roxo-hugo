@@ -10,7 +10,7 @@
       <div class="col-lg-6 ml-auto">
         <div class="site-contact-form">
           <h4>{{ .Params.form_heading }}</h4>
-          <form id="contact-form" action="{{ .Site.Params.formspreeFormUrl }}" method="POST">
+          <form id="contact-form" action="{{ .Site.Params.fabform }}" method="POST">
             <div class="row">
               <div class="col-lg-6">
                 <input type="text" class="form-control" name="first-name" id="first-name" placeholder="{{ .Site.Params.contactForm.placeholder_first_name }}">
@@ -46,6 +46,9 @@
               <p id="contact-form-status"></p>
             </div>
           </form>
+          <p class="contact-form-generator">
+            <a href="https://app.fabform.io/" target="_blank">** Static website forms</a>
+          </p>
         </div>
       </div>
     </div>

@@ -61,4 +61,23 @@
       }
     }
   }
+  &-copyright{
+    p{
+      color: $white;
+      margin: 50px auto 0;
+      text-align: center;
+    }
+    a{
+      color: $text-color-dark;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      letter-spacing: 3px;
+      @include tablet{
+        font-size: 20px;
+      }
+      @include desktop{
+        margin-bottom: 70px;
+      }
+    }
+  }
 }
