@@ -36,6 +36,9 @@
     text-transform: uppercase;
     margin-bottom: 50px;
     letter-spacing: 3px;
+    &:hover{
+      text-decoration: none;
+    }
     @include tablet{
       font-size: 20px;
     }
