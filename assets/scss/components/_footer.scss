@@ -69,9 +69,7 @@
     }
     a{
       color: $text-color-dark;
-      text-transform: uppercase;
-      margin-bottom: 50px;
-      letter-spacing: 3px;
+      transition: all .3s ease;
       @include tablet{
         font-size: 20px;
       }
