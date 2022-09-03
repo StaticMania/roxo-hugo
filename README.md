@@ -34,7 +34,7 @@ Checkout the live demo [here](https://roxo-hugo.staticmania.com/)
 * Blog Support.
 * Well formatted code.
 * Easy Customization.
-* Formspree Contact form.
+* FabForm.io [static website form](https://fabform.io).
 * Crafted for Design Agency/ Portfolio
 
 ## Support
