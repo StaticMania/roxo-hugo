@@ -37,8 +37,9 @@ summarylength = 25
   author = "StaticMania"
   # Google Analitycs
   googleAnalitycsID = "Your ID"
-  # We're using formspree.io for form handling, paste your formspree url below
-  fabform  = "https://fabform.io/f/USAg2Jl"
+  # We're using fabform.io for form handling, paste your fabform.io endpoint below
+  # You can get a free account by visiting https://fabform.io
+  fabform  = "https://fabform.io/f/<insert-fabform.io-endpoint-here>"
 
   # Contact Form
   [params.contactForm]
