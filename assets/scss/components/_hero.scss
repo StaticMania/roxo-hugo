@@ -6,12 +6,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include desktop-4k{
+    height:80vh;
+  }
   @include desktop{
     height: auto;
-    padding: 200px 0;
+    padding: 150px 0;
   }
   @include mobile{
-    padding: 150px 0;
+    padding: 100px 0;
   }
   &-content{
     h1{
@@ -58,6 +61,19 @@
           }
         }
       }
+    }
+  }
+  &-image img {
+    position: relative;
+    top:5vh; right:10vw;
+    max-width: 40vw;
+    height: auto;
+    @include desktop-lg{
+      display:none;
+    }
+    @include desktop-4k{
+      max-width: 20vw;
+      top:1vh; right:25vw;
     }
   }
   &-scroll{

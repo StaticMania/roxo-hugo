@@ -31,7 +31,7 @@
 }
 
 @mixin desktop-4k{
-  @media(min-width:2000px){
+  @media(min-width:3000px){
     @content;
   }
 }
