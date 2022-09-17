@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ $dataJ := getJSON .Site.Params.ppi_url }}
+
 <section class="site-project-header">
   <div class="container">
     <div class="row align-items-center">
@@ -23,23 +25,24 @@
 <section class="site-project" id="project">
   <div class="container">
     <div class="row">
-      {{ range (.Paginator 4).Pages }}
+      {{ range first 20 $dataJ }}
+        {{ $media_type := .media_type | lower }}
+        {{ $image_small := .image_small }}
+        {{ $permalink := .permalink }}
+        {{ $caption := .caption }}
       <div class="col-lg-6 col-md-10 mx-auto">
         <div class="site-project-item">
+          <a href="{{ $permalink }}" target="_blank" rel="noopener noreferrer">
           <div class="site-project-item-thumb">
-            <img src="{{ .Params.Image | absURL }}" alt="project-thumb">
+            <img class="{{ $media_type }}" src="{{ $image_small }}" {{ with $caption }}alt="{{ . }}"{{ else }}alt=""{{ end }}>
           </div>
           <div class="site-project-item-content">
-            <span>{{ delimit .Params.category ", " }}</span>
-            <h3>{{ .Title }}</h3>
-            <a href="{{ .Permalink }}" class="read-more">view project</a>
+            <h4>{{ $caption }}</h4>
           </div>
+        </a>
         </div>
       </div>
       {{ end }}
-      <div class="col-12">
-        <div class="site-project-pagination">
-          {{ template "_internal/pagination.html" . }}
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+{{ $dataJ := getJSON .Site.Params.ppi_url }}
+
 {{ with .Site.Params.portfolio }}
   {{ if .enable }}
   <section class="site-project" id="project">
@@ -9,17 +11,21 @@
             <p>{{ .subtitle }}</p>
           </div>
         </div>
-        {{ range first 4 (where $.Site.RegularPages "Type" "portfolio") }}
+        {{ range first 4 $dataJ }}
+          {{ $media_type := .media_type | lower }}
+          {{ $image_small := .image_small }}
+          {{ $permalink := .permalink }}
+          {{ $caption := .caption }}
         <div class="col-lg-6 col-md-10 mx-auto">
           <div class="site-project-item">
+            <a href="{{ $permalink }}" target="_blank" rel="noopener noreferrer">
             <div class="site-project-item-thumb">
-              <img src="{{ .Params.Image | absURL }}" alt="project-thumb">
+              <img class="{{ $media_type }}" src="{{ $image_small }}" {{ with $caption }}alt="{{ . }}"{{ else }}alt=""{{ end }}>
             </div>
             <div class="site-project-item-content">
-              <span>{{ delimit .Params.category ", " }}</span>
-              <h3>{{ .Title }}</h3>
-              <a href="{{ .Permalink }}" class="read-more">Otvori sliku</a>
+              <h4>{{ $caption }}</h4>
             </div>
+            </a>
           </div>
         </div>
         {{ end }}
