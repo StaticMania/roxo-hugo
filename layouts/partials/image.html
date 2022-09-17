@@ -1,0 +1,23 @@
+<picture>
+  {{ $isJPG := eq (path.Ext .) ".jpg" }}
+  {{ $isPNG := eq (path.Ext .) ".png" }}
+
+  {{ if ($isPNG) -}}
+    <!-- this is a png -->
+    {{ $webpPath:= replace . ".png" ".webp" }}
+    <source srcset="/{{ $webpPath | safeURL }}" type="image/webp" >
+  {{- end }}
+
+  {{ if ($isJPG) -}}
+    <!-- this is a png -->
+    {{ $webpPath:= replace . ".jpg" ".webp" }}
+    <source srcset="/{{ $webpPath | safeURL }}" type="image/webp" >
+  {{- end }}
+
+  <img
+    src="{{ . | absURL }}"
+    alt="project image"
+    loading="lazy"
+    decoding="async"
+  />
+</picture>

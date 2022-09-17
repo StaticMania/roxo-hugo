@@ -196,6 +196,18 @@
           width: 100%;
         }
       }
+      picture{
+        width: 48%;
+        img{
+          width: 100%;
+          &:nth-child(2n){
+            margin-left: auto;
+          }
+          @include tablet{
+            width: 100%;
+          }
+        }
+      }
     }
     &-description{
       margin-bottom: 50px;
