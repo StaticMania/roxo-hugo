@@ -14,7 +14,7 @@
   {{ $bootstrap := resources.Get "css/bootstrap.css" | minify }}
   <link rel="stylesheet" href="{{ $bootstrap.Permalink }}" />
   {{ "<!-- font-awesome -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ "font-awesome/css/font-awesome.min.css" | absURL }}" />
+  <script src="https://kit.fontawesome.com/5c892a73a9.js" crossorigin="anonymous"></script>
   {{ "<!-- Main Stylesheets -->" | safeHTML }}
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
