@@ -6,6 +6,7 @@
   }
   &-title{
     font-weight: 700;
+    margin-bottom:30px;
     @include tablet{
       font-size: 40px;
     }
@@ -18,7 +19,7 @@
     h4{
       font-weight: 300;
       text-transform: uppercase;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       letter-spacing: 3px;
       @include tablet{
         font-size: 20px;
@@ -26,6 +27,21 @@
       @include desktop{
         margin-bottom: 70px;
       }
+    }
+    ul{
+      padding:0;
+    }
+    li{
+      list-style: none;
+      line-height: 50px;
+    }
+    i{
+      color: $text-color-dark;
+      padding: 8px;
+      padding-right:16px;
+    }
+    a{
+      font-size: large;
     }
   }
 }

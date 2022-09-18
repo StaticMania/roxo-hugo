@@ -11,9 +11,41 @@
       <div class="col-lg-6 ml-auto">
         <div class="site-contact-form">
           <h4>{{ .Params.socials }}</h4>
+          <ul>
+            <li>
+              <div>
+              <i class="fa-brands fa-viber fa-lg"></i>
+              <a href="viber://add?number={{.Site.Data.contact.phone}}">{{.Site.Data.contact.phone}}</a>
+              </div>
+            </li>
+            <li>
+              <div>
+              <i class="fa-brands fa-instagram fa-lg"> </i>
+              <a href="https://www.instagram.com/{{.Site.Data.contact.instagram}}">{{.Site.Data.contact.instagram}}</a>
+              </div>            
+            </li>
+            <li>
+              <div>
+              <i class="fa-brands fa-facebook fa-lg"></i>
+              <a href="https://www.facebook.com/{{.Site.Data.contact.facebook}}">{{.Site.Data.contact.facebook}}</a>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="site-contact-form">
-          <h4>{{ .Params.mail }}</h4>
+          <h4>{{ .Params.mailphone }}</h4>
+        <ul>
+          <li>
+            <div>
+              <i class="fa-solid fa-phone fa-lg"></i>
+              <a href="tel:{{.Site.Data.contact.phone}}">{{.Site.Data.contact.phone}}</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope fa-lg"></i>
+            <a href="mailto:{{.Site.Data.contact.mail}}">{{ .Site.Data.contact.mail }}</a>
+          </li>
+        </ul>
         </div>
       </div>
 </section>
