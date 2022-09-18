@@ -46,8 +46,13 @@ h5{
 }
 
 h6{
-  font-size: 27px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.site-hero-content h6 {
+  font-size: 25px;
   font-weight: 400;
   color: $white;
-  text-shadow: 5px 5px 5px #000000be;
+  text-shadow: 5px 3px 5px #000000be;
 }
