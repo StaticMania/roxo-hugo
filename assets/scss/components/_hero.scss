@@ -11,10 +11,10 @@
   }
   @include desktop{
     height: auto;
-    padding: 150px 0;
+    padding: 200px 0;
   }
   @include mobile{
-    padding: 100px 0;
+    padding: 150px 0;
   }
   &-content{
     h1{
