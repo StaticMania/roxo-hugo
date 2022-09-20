@@ -46,7 +46,9 @@
     img{
       width:100%;
       @include mobile{
-        display:none;
+        //display:none;
+        width:70%;
+        margin-bottom:40px;
       }
     }
     &-buttons{
