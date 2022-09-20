@@ -19,23 +19,30 @@
   &-content{
     h1{
       margin-bottom: 20px;
+      margin-top:30px;
       @include desktop-lg{
-        font-size: 100px;
+        font-size: 90px;
         margin-bottom: 10px;
       }
       @include mobile{
-        font-size: 70px;
+        font-size: 80px;
       }
     }
     h6 {
       margin-bottom: 50px;
       @include desktop-lg{
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 25px;
       }
       @include mobile{
-        font-size:18px;
+        font-size:15px;
     }
+    }
+    img{
+      width:100%;
+      @include mobile{
+        display:none;
+      }
     }
     &-buttons{
       margin: 0;
@@ -47,9 +54,9 @@
         }
         &:not(:last-child){
           margin-right: 30px;
-          @include mobile{
+          @include desktop-lg{
             margin-right: 0;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
           }
         }
         .btn{
@@ -62,19 +69,6 @@
         }
       }
     }
-  }
-  &-image img {
-    position: relative;
-    top:6vh; right:10vw;
-    max-width: 40vw;
-    height: auto;
-
-    @include desktop-lg{
-      display:none;
-    }
-    @include desktop-4k{
-      top:1vh; right: 25vw; 
-    }  
   }
   &-scroll{
     position: absolute;

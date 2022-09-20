@@ -3,8 +3,8 @@
   {{ "<!-- Site Hero Start -->" | safeHTML }}
   <section class="site-hero" style="background-image: url('{{ .background_image }}');">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
+      <div class="row align-items-center">
+        <div class="col-md-6 order-2 order-md-1 text-center text-md-left">
           <div class="site-hero-content text-center">
             <h1>
               {{ .heading }}
@@ -32,11 +32,14 @@
             </ul>
           </div>
         </div>
+        <div class="col-md-6 text-center order-1 order-md-2", id="image">
+          <div class="site-hero-content image">
+            <img src="{{ .hero_image }}">
+          </div>
+        </div>
       </div>
     </div>
-    <div class="site-hero-image">  
-      <img src="{{ .hero_image }}", class="site-hero-image"> 
-    </div>
+    <!--- <img src="{{ .hero_image }}", class="site-hero-image"> -->
     <a href="#counter" class="site-hero-scroll scroll-to">
       <img src="images/arrow-down.svg" alt="arrow-down">
     </a>
