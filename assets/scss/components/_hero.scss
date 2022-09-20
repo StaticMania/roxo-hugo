@@ -18,26 +18,31 @@
   }
   &-content{
     h1{
-      margin-bottom: 20px;
-      margin-top:30px;
+      margin-bottom: 5px;
       @include desktop-lg{
-        font-size: 90px;
+        font-size: 100px;
         margin-bottom: 10px;
       }
       @include mobile{
-        font-size: 80px;
+        font-size: 75px;
+      }
+    }
+    h2 {
+      font-size: 50px;
+      @include mobile {
+        font-size: 37.5px;
       }
     }
     h6 {
       margin-bottom: 50px;
       @include desktop-lg{
-        font-size: 20px;
         margin-bottom: 25px;
       }
       @include mobile{
-        font-size:15px;
+        font-size:18px;
     }
     }
+
     img{
       width:100%;
       @include mobile{

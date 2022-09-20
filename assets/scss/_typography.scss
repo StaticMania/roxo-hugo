@@ -23,7 +23,7 @@ h1{
 }
 
 .site-hero-content h1 {
-  font-size: 130px;
+  font-size: 120px;
   font-family: 'Pacifico', cursive;
   color:$white;
   text-shadow: 3px 5px 2px #00000060;
@@ -31,6 +31,13 @@ h1{
 
 h2{
   font-size: 50px;
+}
+
+.site-hero-content h2 {
+  font-size: 60px;
+  font-family: 'Pacifico', cursive;
+  color:$white;
+  text-shadow: 3px 5px 2px #00000060;
 }
 
 h3{
@@ -51,8 +58,8 @@ h6{
 }
 
 .site-hero-content h6 {
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   color: $white;
-  text-shadow: 5px 3px 5px #000000be;
+  text-shadow: 2px 3px 2px #00000060;
 }
