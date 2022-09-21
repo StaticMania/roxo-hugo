@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<section class="site-404">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <h2 class="site-404-header">
+            404 - Stranica nije pronađena 
+          </h2>
+          {{ $startpage := "" }}
+          <a href="{{ $startpage | absURL }}">Povratak na početnu</a>
+        </div>
+  {{ end }}
