@@ -14,15 +14,6 @@ $(document).ready(function() {
     }, 700);
     event.preventDefault();
   });
-
-  $('.site-testimonial-item').on('mouseenter', function(){
-    $('.site-testimonial-item').addClass('inactive');
-    $(this).removeClass('inactive').addClass('active');
-  });
-  $('.site-testimonial-item').on('mouseleave', function(){
-    $('.site-testimonial-item').removeClass('inactive');
-    $('.site-testimonial-item').removeClass('active');
-  });
 });
 
 $(window).on('scroll', function () {
