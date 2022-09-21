@@ -1,8 +1,10 @@
+{{ with .Site.Params }}
 <nav class="navbar navbar-expand-lg site-navigation">
   <div class="container">
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-      <img src="{{ "images/logo.png" | absURL }}" alt="logo" />
+      <img src="{{ .logo | absURL }}" alt="logo" />
     </a>
+    {{ end }}
     <button
       class="navbar-toggler collapsed"
       type="button"
