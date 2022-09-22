@@ -20,7 +20,7 @@
           <div class="site-project-item">
             <a href="{{ $permalink }}" target="_blank" rel="noopener noreferrer">
             <div class="site-project-item-thumb">
-              <img class="{{ $media_type }}" src="{{ $image_small }}" {{ with $caption }}alt="{{ . }}"{{ else }}alt=""{{ end }}>
+              <img class="{{ $media_type }}" src="{{ $image_small }}" {{ with $caption }}alt="{{ . }}"{{ else }}alt=""{{ end }} loading="lazy">
             </div>
             <div class="site-project-item-content">
               <h4>{{ $caption }}</h4>
