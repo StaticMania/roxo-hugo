@@ -22,6 +22,9 @@
     margin: 0;
     img{
       max-width: 156px;
+      @include mobile{
+        max-width: 96px;
+      }
     }
   }
   .nav-item{
