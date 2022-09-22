@@ -1,7 +1,7 @@
 {{ with .Site.Params }}
 <nav class="navbar navbar-expand-lg site-navigation">
   <div class="container">
-    <a class="navbar-brand" href="{{ .Site.BaseURL }}">
+    <a class="navbar-brand" href="{{ .Site.BaseURL | absURL }}">
       <img src="{{ .logo | absURL }}" alt="logo" />
     </a>
     {{ end }}
