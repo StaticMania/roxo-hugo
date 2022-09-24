@@ -17,6 +17,9 @@
     &-title{
       color: $white;
       margin-bottom: 30px;
+      @include mobile{
+        font-size: 25px;
+      }
       @include desktop{
         margin-bottom: 20px;
       }
@@ -37,10 +40,14 @@
           color: $white;
           transition: all 0.3s $site-ease;
           display: block;
+          @include mobile{
+            font-size:18px;
+            padding:11px;
+          }
         }
         &:not(:last-child){
           a{
-            padding-bottom: 9px;
+            padding-bottom: 10px;
           }
         }
       }
