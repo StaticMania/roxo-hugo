@@ -33,13 +33,14 @@
         font-size: 37.5px;
       }
     }
-    h6 {
+    h4 {
       margin-bottom: 50px;
       @include desktop-lg{
         margin-bottom: 25px;
       }
       @include mobile{
-        font-size:18px;
+        font-size:20px;
+        margin-bottom: 50px;
     }
     }
 
