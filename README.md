@@ -18,10 +18,10 @@ Checkout the live demo [here](https://roxo-hugo.staticmania.com/)
 
 ## Installation
 
-1. Add the repository into your Hugo Project repository as a submodule, `git submodule add git@github.com:StaticMania/roxo-hugo.git themes/roxo`.
+1. Add the repository into your Hugo Project repository as a submodule, `git submodule add git@github.com:StaticMania/roxo-hugo.git themes/roxo-hugo`.
 2. Copy the `data`, `content`, `static`, `resources` & `config.toml` files from the `exampleSite` directory and paste it on you Hugo Project repository/directory. From the site home directory:
 
-    cp -a themes/roxo/exampleSite/* .
+    cp -a themes/roxo-hugo/exampleSite/* .
 
 3. Build your site with `hugo serve` and see the result at `http://localhost:1313/`.
 
