@@ -1,7 +1,7 @@
 baseURL       = "http://example.org/"
 languageCode  = "en-us"
 title         = "Roxo | Creative Design Agency"
-theme         = "roxo"
+theme         = "roxo-hugo"
 summarylength = 25
 
 # Site Menus
@@ -38,7 +38,7 @@ summarylength = 25
   # Google Analitycs
   googleAnalitycsID = "Your ID"
   # We're using formspree.io for form handling, paste your formspree url below
-  formspreeFormUrl  = "https://formspree.io/myykjpje"
+  fabform  = "https://fabform.io/f/USAg2Jl"
 
   # Contact Form
   [params.contactForm]

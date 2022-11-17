@@ -29,3 +29,22 @@
     }
   }
 }
+.contact-form-generator {
+  margin-top: 20px;
+    a{
+    color: $text-color-dark;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    &:hover{
+      text-decoration: none;
+    }
+    @include tablet{
+      font-size: 20px;
+    }
+    @include desktop{
+      margin-bottom: 70px;
+    }
+  }
+}

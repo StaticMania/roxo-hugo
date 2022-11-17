@@ -62,12 +62,17 @@
           </p>
         </a>
       </div>
+      <div class="col-12">
+        <div class="site-footer-copyright">
+          <p>© Copyright {{ dateFormat "2006" now }} - All Rights Reserved by <a href="https://staticmania.com/" target="_blank">StaticMania</a> </p>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
-{{ $formhandler := resources.Get "js/formhandler.js" | minify }}
-<script src="{{ $formhandler.Permalink }}"></script>
+<!-- {{ $formhandler := resources.Get "js/formhandler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script> -->
 {{ $vendor := resources.Get "js/vendor.js" | minify }}
 <script src="{{ $vendor.Permalink }}"></script>
 {{ $script := resources.Get "js/script.js" | minify }}
