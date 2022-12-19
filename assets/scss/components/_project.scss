@@ -11,15 +11,12 @@
       }
     }
     &-content{
-      position: absolute;
       background: $gray;
       width: 100%;
       padding: 45px 50px;
-      bottom: 0;
       transition: all .3s $site-ease;
       @include tablet{
         padding: 30px;
-        padding-bottom: 75px;
       }
       span{
         font-family: $secondary-font;
