@@ -14,12 +14,6 @@
           <ul>
             <li>
               <div>
-              <i class="fa-brands fa-viber fa-lg"></i>
-              <a href="viber://add?number={{.Site.Data.contact.phone}}">{{.Site.Data.contact.phone}}</a>
-              </div>
-            </li>
-            <li>
-              <div>
               <i class="fa-brands fa-instagram fa-lg"> </i>
               <a href="https://www.instagram.com/{{.Site.Data.contact.instagram}}">{{.Site.Data.contact.instagram}}</a>
               </div>            
@@ -42,9 +36,15 @@
             </div>
           </li>
           <li>
+            <div>
+            <i class="fa-brands fa-viber fa-lg"></i>
+            <a href="viber://add?number={{.Site.Data.contact.phone}}">{{.Site.Data.contact.phone}}</a>
+            </div>
+          </li>
+          <!--<li>
             <i class="fa-solid fa-envelope fa-lg"></i>
             <a href="mailto:{{.Site.Data.contact.mail}}">{{ .Site.Data.contact.mail }}</a>
-          </li>
+          </li> -->
         </ul>
         </div>
       </div>
