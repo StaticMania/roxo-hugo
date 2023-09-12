@@ -12,7 +12,7 @@
       </div>
       <div class="col-lg-4">
         <a href="#project" class="site-project-header-action scroll-to">
-          <span>Scroll Down</span>
+          <span>{{ .Site.Params.portfolio.scroll_down }}</span>
           <img src="{{ "images/arrow-down.svg" | absURL }}" alt="arrow-down">
         </a>
       </div>
@@ -32,7 +32,7 @@
           <div class="site-project-item-content">
             <span>{{ delimit .Params.category ", " }}</span>
             <h3>{{ .Title }}</h3>
-            <a href="{{ .Permalink }}" class="read-more">view project</a>
+            <a href="{{ .Permalink }}" class="read-more">{{ .Site.Params.portfolio.view_project }}</a>
           </div>
         </div>
       </div>

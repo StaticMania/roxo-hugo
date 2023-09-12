@@ -31,6 +31,10 @@ summarylength = 25
 # Site Params
 [params]
   logo = "images/logo.png"
+  logo_footer = "images/logo-footer.png"
+  favicon_icon = "images/favicon.ico"
+  favicon_shortcut_icon = "images/favicon.png"
+  custom_stylesheets = []   # [ "scss/my_1.scss", "scss/my_2.scss" ]
   dateFormat = "26 FEB 1994"
   # Meta data
   description = "Roxo Hugo themes | Design Agency Template by StaticMania"
@@ -74,10 +78,16 @@ summarylength = 25
     secondary_button      = "Connect with Us"
     secondary_button_url  = "contact"
 
+  [params.blog]
+    read_more             = "read more"
+
   [params.portfolio]
     enable    = true
     title     = "OUR RECENT WORKS"
     subtitle  = "Crafting experiences and seeking to make the complex clear & beautiful."
+    view_project = "view project"
+    more_works = "MORE WORKS"
+    scroll_down = "scroll down"
 
   [params.call_to_action]
     enable              = true
@@ -89,6 +99,7 @@ summarylength = 25
     secondary_button_url = "portfolio"
 
   [params.footer]
+    params.footer.qr_print = false
     # Footer Contact Info
     [params.footer.contactInfo]
       title   = "Contact Info"
@@ -129,3 +140,5 @@ summarylength = 25
       [params.footer.service]
         title       = "We help brands:"
         description = "develop design solutions<br>produce valuable cultural content<br>create fresh brand experience"
+      [params.footer.back_to_top]
+        description = "I want to <br> visit again"

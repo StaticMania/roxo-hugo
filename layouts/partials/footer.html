@@ -2,18 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="site-footer-logo"><a href="{{ .Site.BaseURL }}"><img src="{{ "images/logo-footer.png" | absURL }}" alt="logo-footer"></a></div>
+        <div class="site-footer-logo"><a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo_footer | absURL }}" alt="logo-footer"></a></div>
       </div>
       {{ with .Site.Params.footer.contactInfo }}
       <div class="col-lg-3 col-md-6">
         <div class="site-footer-widget">
           <h5 class="site-footer-widget-title">{{ .title }}</h5>
           <p class="site-footer-widget-description">
-            {{ .address | safeHTML }}
-            <br>
-            <a href="tel:{{ .phone }}">{{ .phone }}</a>
-            <br>
-            <a href="mailto:{{ .email }}">{{ .email }}</a>
+	    {{ if .address }}
+              {{ .address | safeHTML }}
+	      <br>
+	    {{ end }}
+	    {{ if .phone }}
+              <a href="tel:{{ .phone }}">{{ .phone }}</a>
+              <br>
+	    {{ end }}
+	    {{ if .email }}
+              <a href="mailto:{{ .email }}">{{ .email }}</a>
+	    {{ end }}
           </p>
         </div>
       </div>
@@ -56,9 +62,7 @@
         <a href="#top" class="site-footer-widget-top">
           <img src="{{ "images/to-top.svg" | absURL }}" alt="back-to-top">
           <p>
-            I want to 
-            <br>
-            visit again
+	    {{ .Site.Params.footer.back_to_top.description | safeHTML }}
           </p>
         </a>
       </div>
@@ -68,6 +72,27 @@
         </div>
       </div>
     </div>
+    {{ if .Site.Params.footer.qr_print }}
+    <div class="row d-none d-print-block">
+      <div class="col col-lg-2">
+        {{ $qrcode := resources.Get "js/qrcode.js" | minify }}
+        <script src="{{ $qrcode.Permalink }}"></script>
+
+        <div id="qrcode">
+          <script type="text/javascript">
+           new QRCode(document.getElementById("qrcode"), {
+             text: "{{ .Page.RelPermalink | absURL }}",
+             width: 128,
+             height: 128,
+           });
+          </script>
+        </div>
+      </div>
+      <div class="col col-md-auto">
+        {{ .Page.RelPermalink | absURL }}
+      </div>
+    </div>
+    {{ end }}
   </div>
 </footer>
 
