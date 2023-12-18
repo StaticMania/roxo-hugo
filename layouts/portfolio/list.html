@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $dataJ := getJSON .Site.Params.ppi_url }}
+{{ $dataJ := getJSON .Site.Params.behold_url }}
 
 <section class="site-project-header">
   <div class="container">
@@ -25,15 +25,15 @@
   <div class="container">
     <div class="row">
       {{ range first 20 $dataJ }}
-        {{ $media_type := .media_type | lower }}
-        {{ $image_small := .image_small }}
+        {{ $media_type := .mediaType | lower }}
+        {{ $media_url := .mediaUrl }}
         {{ $permalink := .permalink }}
         {{ $caption := .caption }}
       <div class="col-lg-6 col-md-10 mx-auto">
         <div class="site-project-item">
           <a href="{{ $permalink }}" target="_blank" rel="noopener noreferrer">
           <div class="site-project-item-thumb">
-            <img class="{{ $media_type }}" src="{{ $image_small }}" {{ with $caption }}alt="{{ . }}"{{ else }}alt=""{{ end }}>
+            <img class="{{ $media_type }}" src="{{ $media_url }}" {{ with $caption }}alt="{{ . }}"{{ else }}alt=""{{ end }}>
           </div>
           <div class="site-project-item-content">
            <h4>{{ $caption }}</h4>
